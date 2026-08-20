@@ -1,7 +1,6 @@
-# xpdm — Explainable Predictive Maintenance
-
-**Project:** Why Did the Model Flag This Machine?  
-Explainable Deep Learning for Predictive Maintenance using NASA CMAPSS datasets.
+# Cascade Guard - Explainable Predictive Maintenance
+ 
+ Explainable Deep Learning for Predictive Maintenance using NASA CMAPSS datasets.
 
 ## Setup
 ```bash
