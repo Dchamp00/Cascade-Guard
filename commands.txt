@@ -1,0 +1,157 @@
+ 
+================================================================================
+  STEP 0 — ENVIRONMENT SETUP (run once per session)
+================================================================================
+ 
+  cd
+  venv\Scripts\activate
+ 
+  # Verify environment is active — prompt should show (venv)
+  python --version
+ 
+  # Install Captum if not already installed (required for XAI notebooks)
+  pip install captum
+ 
+ 
+================================================================================
+  STEP 1 — DATA LOADING SMOKE TEST
+================================================================================
+ 
+  python -m src.data.cmapss_loader FD001
+  python -m src.data.cmapss_loader FD002
+  python -m src.data.cmapss_loader FD003
+  python -m src.data.cmapss_loader FD004
+ 
+ 
+================================================================================
+  STEP 2 — PREPROCESSING PIPELINE
+================================================================================
+ 
+  # Run a single subset
+  python -m src.data.preprocessing --subset FD001
+  python -m src.data.preprocessing --subset FD002
+  python -m src.data.preprocessing --subset FD003
+  python -m src.data.preprocessing --subset FD004
+ 
+  # Run all four subsets in one command
+  python -m src.data.preprocessing --subset all
+ 
+ 
+================================================================================
+  STEP 3 — MODEL TRAINING
+================================================================================
+ 
+  ── LSTM ──────────────────────────────────────────────────────────────────────
+ 
+  python -m src.utils.trainer --model lstm --subset FD001
+  python -m src.utils.trainer --model lstm --subset FD002
+  python -m src.utils.trainer --model lstm --subset FD003
+  python -m src.utils.trainer --model lstm --subset FD004
+ 
+  # Train LSTM on all subsets in one command
+  python -m src.utils.trainer --model lstm --subset all
+ 
+ 
+  ── 1D-CNN ────────────────────────────────────────────────────────────────────
+ 
+  python -m src.utils.trainer --model cnn --subset FD001
+  python -m src.utils.trainer --model cnn --subset FD002
+  python -m src.utils.trainer --model cnn --subset FD003
+  python -m src.utils.trainer --model cnn --subset FD004
+ 
+  # Train CNN on all subsets in one command
+  python -m src.utils.trainer --model cnn --subset all
+ 
+ 
+  ── TRANSFORMER ───────────────────────────────────────────────────────────────
+ 
+  python -m src.utils.trainer --model transformer --subset FD001
+  python -m src.utils.trainer --model transformer --subset FD002
+  python -m src.utils.trainer --model transformer --subset FD003
+  python -m src.utils.trainer --model transformer --subset FD004
+ 
+  # Train Transformer on all subsets in one command
+  python -m src.utils.trainer --model transformer --subset all
+ 
+ 
+================================================================================
+  STEP 4 — JUPYTER NOTEBOOKS (open in browser)
+================================================================================
+ 
+  # Start Jupyter (run from project root with venv active)
+  jupyter notebook
+ 
+  # Or open a specific notebook directly:
+  jupyter notebook notebooks/01_eda.ipynb
+  jupyter notebook notebooks/02_preprocessing_verification.ipynb
+  jupyter notebook notebooks/03_lstm_training.ipynb
+  jupyter notebook notebooks/04_cnn_training.ipynb
+  jupyter notebook notebooks/05_transformer_training.ipynb
+  jupyter notebook notebooks/06_results_comparison.ipynb
+  jupyter notebook notebooks/07_xai_gradientshap.ipynb
+  jupyter notebook notebooks/08_xai_integrated_gradients.ipynb
+  jupyter notebook notebooks/09_xai_attention_weights.ipynb
+  jupyter notebook notebooks/10_xai_evaluation.ipynb
+ 
+ 
+================================================================================
+  STEP 5 — QUICK VERIFICATION COMMANDS
+================================================================================
+ 
+  # Verify config loads correctly
+  python -c "from src.utils.config import RUL_CLIP, WINDOW_SIZE, VAL_FRAC, SEED, DATA_PROC, INFORMATIVE_SENSORS; print('Config OK')"
+ 
+  # Check that a saved model checkpoint exists after training
+  python -c "import os; print([f for f in os.listdir('checkpoints') if f.endswith('.pt')])"
+ 
+  # Quick test that preprocessing output arrays exist and have correct shape
+  python -c "
+import numpy as np
+X = np.load('data/processed/FD001/X_train.npy')
+y = np.load('data/processed/FD001/y_train.npy')
+print(f'X_train shape: {X.shape}')   # expect (15332, 30, 14)
+print(f'y_train shape: {y.shape}')   # expect (15332,)
+print(f'X min/max: {X.min():.4f} / {X.max():.4f}')  # expect ~0.0 / ~1.0
+"
+ 
+ 
+================================================================================
+  NOTES
+================================================================================
+ 
+  1. Always activate the venv before running any command.
+     Without activation, Python will not find the project packages.
+ 
+  2. The --subset all flag trains sequentially on FD001, FD002, FD003, FD004
+     in that order. Expect approximately 5-15 minutes per subset per model
+     depending on hardware.
+ 
+  3. XAI files (gradientshap.py, integrated_gradients.py, attention_viz.py)
+     and evaluation files (xai_metrics.py) have NO standalone CLI.
+     They are imported and executed exclusively through their corresponding
+     Jupyter notebooks (07, 08, 09, 10).
+ 
+  4. All results are saved automatically to:
+       checkpoints/   — best model .pt files
+       results/       — JSON result files per model per subset
+       figures/       — PNG plots generated by each notebook
+ 
+  5. Random seed is fixed at 42 throughout. Re-running any command will
+     produce identical results to those reported in the dissertation.
+ 
+================================================================================
+  FULL SEQUENCE (run everything from scratch in order)
+================================================================================
+ 
+  cd 
+  venv\Scripts\activate
+  pip install captum
+  python -m src.data.preprocessing --subset all
+  python -m src.utils.trainer --model lstm        --subset all
+  python -m src.utils.trainer --model cnn         --subset all
+  python -m src.utils.trainer --model transformer --subset all
+  jupyter notebook
+ 
+  # Then open notebooks 06 through 10 in order for XAI and evaluation.
+ 
+================================================================================

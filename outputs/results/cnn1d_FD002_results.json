@@ -1,0 +1,140 @@
+{
+  "model": "cnn1d",
+  "subset": "FD002",
+  "best_val_rmse": 19.666948318481445,
+  "test": {
+    "RMSE": 17.8118896484375,
+    "MAE": 14.104049682617188,
+    "R2": 0.8265019655227661,
+    "NASA_Score": 1230.3798828125
+  },
+  "epochs_run": 21,
+  "log": [
+    {
+      "epoch": 1,
+      "train_mse": 4374.472622,
+      "val_rmse": 23.7899,
+      "lr": 0.001
+    },
+    {
+      "epoch": 2,
+      "train_mse": 484.527926,
+      "val_rmse": 21.9678,
+      "lr": 0.001
+    },
+    {
+      "epoch": 3,
+      "train_mse": 417.905872,
+      "val_rmse": 21.8785,
+      "lr": 0.001
+    },
+    {
+      "epoch": 4,
+      "train_mse": 389.60527,
+      "val_rmse": 21.8009,
+      "lr": 0.001
+    },
+    {
+      "epoch": 5,
+      "train_mse": 367.240343,
+      "val_rmse": 21.1004,
+      "lr": 0.001
+    },
+    {
+      "epoch": 6,
+      "train_mse": 348.405425,
+      "val_rmse": 19.6669,
+      "lr": 0.001
+    },
+    {
+      "epoch": 7,
+      "train_mse": 336.945899,
+      "val_rmse": 21.3628,
+      "lr": 0.001
+    },
+    {
+      "epoch": 8,
+      "train_mse": 324.794203,
+      "val_rmse": 21.7837,
+      "lr": 0.001
+    },
+    {
+      "epoch": 9,
+      "train_mse": 309.741607,
+      "val_rmse": 24.2721,
+      "lr": 0.001
+    },
+    {
+      "epoch": 10,
+      "train_mse": 305.239671,
+      "val_rmse": 20.1788,
+      "lr": 0.001
+    },
+    {
+      "epoch": 11,
+      "train_mse": 295.524935,
+      "val_rmse": 20.4484,
+      "lr": 0.001
+    },
+    {
+      "epoch": 12,
+      "train_mse": 289.324018,
+      "val_rmse": 21.2469,
+      "lr": 0.001
+    },
+    {
+      "epoch": 13,
+      "train_mse": 284.58933,
+      "val_rmse": 23.1243,
+      "lr": 0.001
+    },
+    {
+      "epoch": 14,
+      "train_mse": 271.670696,
+      "val_rmse": 20.2104,
+      "lr": 0.0005
+    },
+    {
+      "epoch": 15,
+      "train_mse": 265.327995,
+      "val_rmse": 22.1706,
+      "lr": 0.0005
+    },
+    {
+      "epoch": 16,
+      "train_mse": 267.015225,
+      "val_rmse": 20.2497,
+      "lr": 0.0005
+    },
+    {
+      "epoch": 17,
+      "train_mse": 262.412051,
+      "val_rmse": 20.3948,
+      "lr": 0.0005
+    },
+    {
+      "epoch": 18,
+      "train_mse": 254.073464,
+      "val_rmse": 20.7146,
+      "lr": 0.0005
+    },
+    {
+      "epoch": 19,
+      "train_mse": 253.545072,
+      "val_rmse": 20.702,
+      "lr": 0.0005
+    },
+    {
+      "epoch": 20,
+      "train_mse": 254.671832,
+      "val_rmse": 20.4687,
+      "lr": 0.0005
+    },
+    {
+      "epoch": 21,
+      "train_mse": 250.417096,
+      "val_rmse": 21.4356,
+      "lr": 0.0005
+    }
+  ]
+}

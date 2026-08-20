@@ -1,0 +1,236 @@
+{
+  "model": "lstm",
+  "subset": "FD003",
+  "best_val_rmse": 10.811680793762207,
+  "test": {
+    "RMSE": 13.728702545166016,
+    "MAE": 9.285833358764648,
+    "R2": 0.8771320581436157,
+    "NASA_Score": 514.7283325195312
+  },
+  "epochs_run": 37,
+  "log": [
+    {
+      "epoch": 1,
+      "train_mse": 7116.770564,
+      "val_rmse": 60.3883,
+      "lr": 0.001
+    },
+    {
+      "epoch": 2,
+      "train_mse": 1720.801292,
+      "val_rmse": 18.5163,
+      "lr": 0.001
+    },
+    {
+      "epoch": 3,
+      "train_mse": 411.067037,
+      "val_rmse": 15.3928,
+      "lr": 0.001
+    },
+    {
+      "epoch": 4,
+      "train_mse": 366.039342,
+      "val_rmse": 16.3259,
+      "lr": 0.001
+    },
+    {
+      "epoch": 5,
+      "train_mse": 303.544818,
+      "val_rmse": 14.8962,
+      "lr": 0.001
+    },
+    {
+      "epoch": 6,
+      "train_mse": 284.360973,
+      "val_rmse": 16.8892,
+      "lr": 0.001
+    },
+    {
+      "epoch": 7,
+      "train_mse": 306.369722,
+      "val_rmse": 13.4841,
+      "lr": 0.001
+    },
+    {
+      "epoch": 8,
+      "train_mse": 258.583188,
+      "val_rmse": 21.0161,
+      "lr": 0.001
+    },
+    {
+      "epoch": 9,
+      "train_mse": 242.2722,
+      "val_rmse": 15.3512,
+      "lr": 0.001
+    },
+    {
+      "epoch": 10,
+      "train_mse": 237.286666,
+      "val_rmse": 12.1047,
+      "lr": 0.001
+    },
+    {
+      "epoch": 11,
+      "train_mse": 235.968927,
+      "val_rmse": 14.2127,
+      "lr": 0.001
+    },
+    {
+      "epoch": 12,
+      "train_mse": 236.682659,
+      "val_rmse": 14.0952,
+      "lr": 0.001
+    },
+    {
+      "epoch": 13,
+      "train_mse": 220.227176,
+      "val_rmse": 14.152,
+      "lr": 0.001
+    },
+    {
+      "epoch": 14,
+      "train_mse": 208.198323,
+      "val_rmse": 13.1724,
+      "lr": 0.001
+    },
+    {
+      "epoch": 15,
+      "train_mse": 215.270743,
+      "val_rmse": 12.7154,
+      "lr": 0.001
+    },
+    {
+      "epoch": 16,
+      "train_mse": 209.63052,
+      "val_rmse": 13.4523,
+      "lr": 0.001
+    },
+    {
+      "epoch": 17,
+      "train_mse": 206.173463,
+      "val_rmse": 11.8555,
+      "lr": 0.001
+    },
+    {
+      "epoch": 18,
+      "train_mse": 204.556019,
+      "val_rmse": 12.7788,
+      "lr": 0.001
+    },
+    {
+      "epoch": 19,
+      "train_mse": 195.580588,
+      "val_rmse": 11.4869,
+      "lr": 0.001
+    },
+    {
+      "epoch": 20,
+      "train_mse": 200.411462,
+      "val_rmse": 13.9514,
+      "lr": 0.001
+    },
+    {
+      "epoch": 21,
+      "train_mse": 198.667577,
+      "val_rmse": 11.7792,
+      "lr": 0.001
+    },
+    {
+      "epoch": 22,
+      "train_mse": 197.442814,
+      "val_rmse": 10.8117,
+      "lr": 0.001
+    },
+    {
+      "epoch": 23,
+      "train_mse": 190.315525,
+      "val_rmse": 14.0251,
+      "lr": 0.001
+    },
+    {
+      "epoch": 24,
+      "train_mse": 192.901849,
+      "val_rmse": 14.621,
+      "lr": 0.001
+    },
+    {
+      "epoch": 25,
+      "train_mse": 197.909062,
+      "val_rmse": 11.4292,
+      "lr": 0.001
+    },
+    {
+      "epoch": 26,
+      "train_mse": 192.176641,
+      "val_rmse": 11.2697,
+      "lr": 0.001
+    },
+    {
+      "epoch": 27,
+      "train_mse": 197.247047,
+      "val_rmse": 12.6902,
+      "lr": 0.001
+    },
+    {
+      "epoch": 28,
+      "train_mse": 188.681105,
+      "val_rmse": 11.4425,
+      "lr": 0.001
+    },
+    {
+      "epoch": 29,
+      "train_mse": 187.238953,
+      "val_rmse": 11.8547,
+      "lr": 0.001
+    },
+    {
+      "epoch": 30,
+      "train_mse": 187.458295,
+      "val_rmse": 11.248,
+      "lr": 0.0005
+    },
+    {
+      "epoch": 31,
+      "train_mse": 176.337622,
+      "val_rmse": 12.4106,
+      "lr": 0.0005
+    },
+    {
+      "epoch": 32,
+      "train_mse": 175.182258,
+      "val_rmse": 12.1712,
+      "lr": 0.0005
+    },
+    {
+      "epoch": 33,
+      "train_mse": 174.121974,
+      "val_rmse": 11.8348,
+      "lr": 0.0005
+    },
+    {
+      "epoch": 34,
+      "train_mse": 173.292216,
+      "val_rmse": 11.5956,
+      "lr": 0.0005
+    },
+    {
+      "epoch": 35,
+      "train_mse": 175.910963,
+      "val_rmse": 11.584,
+      "lr": 0.0005
+    },
+    {
+      "epoch": 36,
+      "train_mse": 173.965615,
+      "val_rmse": 10.9699,
+      "lr": 0.0005
+    },
+    {
+      "epoch": 37,
+      "train_mse": 173.438692,
+      "val_rmse": 11.8249,
+      "lr": 0.0005
+    }
+  ]
+}

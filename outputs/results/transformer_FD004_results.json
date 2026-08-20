@@ -1,0 +1,218 @@
+{
+  "model": "transformer",
+  "subset": "FD004",
+  "best_val_rmse": 17.16413116455078,
+  "test": {
+    "RMSE": 16.05099105834961,
+    "MAE": 11.88882064819336,
+    "R2": 0.8590296506881714,
+    "NASA_Score": 1544.05859375
+  },
+  "epochs_run": 34,
+  "log": [
+    {
+      "epoch": 1,
+      "train_mse": 5720.028872,
+      "val_rmse": 41.0453,
+      "lr": 0.001
+    },
+    {
+      "epoch": 2,
+      "train_mse": 624.730022,
+      "val_rmse": 20.9649,
+      "lr": 0.001
+    },
+    {
+      "epoch": 3,
+      "train_mse": 440.828522,
+      "val_rmse": 21.6021,
+      "lr": 0.001
+    },
+    {
+      "epoch": 4,
+      "train_mse": 417.641687,
+      "val_rmse": 19.5031,
+      "lr": 0.001
+    },
+    {
+      "epoch": 5,
+      "train_mse": 395.511873,
+      "val_rmse": 19.3034,
+      "lr": 0.001
+    },
+    {
+      "epoch": 6,
+      "train_mse": 357.85727,
+      "val_rmse": 19.817,
+      "lr": 0.001
+    },
+    {
+      "epoch": 7,
+      "train_mse": 325.246352,
+      "val_rmse": 17.5659,
+      "lr": 0.001
+    },
+    {
+      "epoch": 8,
+      "train_mse": 312.393814,
+      "val_rmse": 18.295,
+      "lr": 0.001
+    },
+    {
+      "epoch": 9,
+      "train_mse": 289.63476,
+      "val_rmse": 20.0029,
+      "lr": 0.001
+    },
+    {
+      "epoch": 10,
+      "train_mse": 280.921196,
+      "val_rmse": 19.0882,
+      "lr": 0.001
+    },
+    {
+      "epoch": 11,
+      "train_mse": 270.389874,
+      "val_rmse": 17.879,
+      "lr": 0.001
+    },
+    {
+      "epoch": 12,
+      "train_mse": 261.630895,
+      "val_rmse": 17.3176,
+      "lr": 0.001
+    },
+    {
+      "epoch": 13,
+      "train_mse": 253.474855,
+      "val_rmse": 18.2553,
+      "lr": 0.001
+    },
+    {
+      "epoch": 14,
+      "train_mse": 242.810544,
+      "val_rmse": 17.3146,
+      "lr": 0.001
+    },
+    {
+      "epoch": 15,
+      "train_mse": 240.984244,
+      "val_rmse": 18.1414,
+      "lr": 0.001
+    },
+    {
+      "epoch": 16,
+      "train_mse": 238.841373,
+      "val_rmse": 18.0322,
+      "lr": 0.001
+    },
+    {
+      "epoch": 17,
+      "train_mse": 228.930039,
+      "val_rmse": 17.5682,
+      "lr": 0.001
+    },
+    {
+      "epoch": 18,
+      "train_mse": 231.245879,
+      "val_rmse": 17.4764,
+      "lr": 0.001
+    },
+    {
+      "epoch": 19,
+      "train_mse": 226.590847,
+      "val_rmse": 17.1641,
+      "lr": 0.001
+    },
+    {
+      "epoch": 20,
+      "train_mse": 221.847663,
+      "val_rmse": 17.5099,
+      "lr": 0.001
+    },
+    {
+      "epoch": 21,
+      "train_mse": 218.64942,
+      "val_rmse": 18.0777,
+      "lr": 0.001
+    },
+    {
+      "epoch": 22,
+      "train_mse": 218.816823,
+      "val_rmse": 17.9887,
+      "lr": 0.001
+    },
+    {
+      "epoch": 23,
+      "train_mse": 217.771758,
+      "val_rmse": 18.4075,
+      "lr": 0.001
+    },
+    {
+      "epoch": 24,
+      "train_mse": 215.799568,
+      "val_rmse": 17.8596,
+      "lr": 0.001
+    },
+    {
+      "epoch": 25,
+      "train_mse": 213.505185,
+      "val_rmse": 17.4903,
+      "lr": 0.001
+    },
+    {
+      "epoch": 26,
+      "train_mse": 210.334124,
+      "val_rmse": 17.7593,
+      "lr": 0.001
+    },
+    {
+      "epoch": 27,
+      "train_mse": 208.352331,
+      "val_rmse": 17.6601,
+      "lr": 0.0005
+    },
+    {
+      "epoch": 28,
+      "train_mse": 202.032572,
+      "val_rmse": 17.426,
+      "lr": 0.0005
+    },
+    {
+      "epoch": 29,
+      "train_mse": 198.307631,
+      "val_rmse": 17.8521,
+      "lr": 0.0005
+    },
+    {
+      "epoch": 30,
+      "train_mse": 197.180743,
+      "val_rmse": 18.0912,
+      "lr": 0.0005
+    },
+    {
+      "epoch": 31,
+      "train_mse": 195.437775,
+      "val_rmse": 17.512,
+      "lr": 0.0005
+    },
+    {
+      "epoch": 32,
+      "train_mse": 195.65099,
+      "val_rmse": 18.1379,
+      "lr": 0.0005
+    },
+    {
+      "epoch": 33,
+      "train_mse": 191.667758,
+      "val_rmse": 17.761,
+      "lr": 0.0005
+    },
+    {
+      "epoch": 34,
+      "train_mse": 191.736794,
+      "val_rmse": 18.3687,
+      "lr": 0.0005
+    }
+  ]
+}
